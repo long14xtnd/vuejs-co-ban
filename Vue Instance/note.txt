@@ -1,0 +1,3 @@
+Cách cài đặt
+Vue Instance
+data và method

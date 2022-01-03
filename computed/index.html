@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tìm hiểu về computed</title>
+    
+</head>
+<body>
+    <div id="app">
+        <h1>Tìm hiểu về computed</h1>
+        <p>Thông điệp ban đầu: "{{ message }}"</p>
+        <p>Thông điệp bị đảo ngược bằng tính toán (computed): "{{ reversedMessage }}"</p>
+        <hr>
+        <button v-on:click="a++">A = A + 1</button>
+        <button v-on:click="b++">B = B + 1</button>
+        <p>Number + A = {{ addA }}</p>
+        <p>Number + B = {{ addB }}</p>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+<script>
+   var app = new Vue({
+  el: '#app',
+  data: {
+    message: 'Xin chao cac ban',
+    a : 0,
+    b : 0,
+    number : 20
+  },
+  methods : {
+      
+  },
+  computed: {
+    // một computed getter
+    reversedMessage: function () {
+      // `this` trỏ tới đối tượng app
+      return this.message.split(' ').reverse().join(' ');
+    },
+    addA(){
+          console.log('Run Add a');
+          return this.a + this.number;
+      },
+      addB(){
+          console.log('Run Add b');
+          return this.b + this.number;
+      }
+    
+  }
+})
+</script>
+</html>

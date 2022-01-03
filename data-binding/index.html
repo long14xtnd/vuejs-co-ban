@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Binding</title>
+</head>
+<body>
+    <style>
+        img{
+            width: 200px;
+            height: auto;
+        }
+    </style>
+    <h1>Làm quen với data binding</h1>
+    <div class="list-product">
+        {{ check ? 'Ve ben trai' : 'Ve ben phai' }}
+        <a v-bind:href="url" class="product-title">{{ product_title }}</a><br>
+        <a v-bind:href="url" class="thumb"><img v-bind:src="src_img" alt=""></a>
+        <p class="price">{{ formatPrice() }}</p>
+        <p class="color">{{ color }}</p>
+
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+<script src="main.js"></script>
+</html>

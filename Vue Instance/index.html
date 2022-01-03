@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Instance</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+    <h1>Hello</h1>
+    <div class="list-blog">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae consectetur minus natus eum mollitia sed, repellat quasi rerum numquam reiciendis iusto itaque pariatur fuga id saepe. Voluptate, nulla. Corrupti, natus.</p>
+
+    </div>
+    <div id="app">
+        <p>{{ message }}</p>
+        <h2>{{ say('CỤ Long') }}</h2>
+    </div>
+    <div id="app-2">
+        <span v-bind:title="message">
+          Hover your mouse over me for a few seconds
+          to see my dynamically bound title!
+        </span>
+      </div>
+</body>
+<script src="main.js"></script>
+</html>
